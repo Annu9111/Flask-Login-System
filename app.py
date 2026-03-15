@@ -29,7 +29,7 @@ def login():
 @app.route("/welcome")
 def welcome():
     if "user" in session:
-        return'''
+        return f'''
     <h2>Welcome ,{session["user"]}!!</h2>
     <a href={url_for('logout')}>logout</a>
     '''
