@@ -24,5 +24,18 @@ def login():
         </form>
           
     """
+
+#welcome page
+@app.route("/welcome")
+def welcome():
+    if "user" in session:
+        return'''
+    <h2>Welcome ,{session["user"]}!!</h2>
+    <a href={url_for('logout')}>logout</a>
+    '''
+    return redirect(url_for("login"))
+
+#logout
+        
     
     
